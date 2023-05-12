@@ -1,6 +1,6 @@
 <script setup>
 const { data } = await useFetch(
-  "http://192.46.209.205:1337/api/blogs?sort[0]=createdAt%3Adesc&populate=*&pagination[page]=1&pagination[pageSize]=10"
+  "http://192.46.209.205:1337/api/blogs?sort[0]=createdAt%3Adesc&populate=*&pagination[page]=1&pagination[pageSize]=20"
 );
 console.log("data", data);
 </script>
@@ -29,7 +29,7 @@ console.log("data", data);
               alt="Mountain"
             />
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">{{ title }}</div>
+              <div class="font-bold text-xl mb-2">{{ title.slice(0,40) }}</div>
               <p class="text-gray-700 text-base">
                 {{ fulltext.slice(0, 100) }}.....
               </p>
