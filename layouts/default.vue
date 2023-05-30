@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col h-screen justify-between" >
     <Navbar />
     <slot />
     <section-recent-blog/>
